@@ -29,12 +29,12 @@ class AllUserVC: UIViewController {
     }
     private func getUsers() {
         let users = UserApi().getUsers()
-
-        if usersArray?.count  ?? 0 > 0 {
-            usersArray = usersArray! + users
-        }else {
+        if  let currentUsers = usersArray {
+            usersArray?.removeAll()
+            usersArray = currentUsers + users
+        }
+        else {
             usersArray = users
-            
         }
         
         usersArray = usersArray?.sorted { $0.firstName.localizedCaseInsensitiveCompare($1.firstName) == ComparisonResult.orderedAscending }
