@@ -33,6 +33,7 @@ class AllUserVC: UIViewController {
 
         if usersArray?.count  ?? 0 > 0 {
             usersArray = usersArray! + sortedUsers
+            usersArray = usersArray?.sorted { $0.firstName.localizedCaseInsensitiveCompare($1.firstName) == ComparisonResult.orderedAscending }
         }else {
             usersArray = sortedUsers
             
