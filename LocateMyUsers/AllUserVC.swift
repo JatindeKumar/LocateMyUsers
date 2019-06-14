@@ -15,6 +15,7 @@ class AllUserVC: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     var usersArray: [User]?
     var mapViewShown = true
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
@@ -29,11 +30,16 @@ class AllUserVC: UIViewController {
     private func getUsers() {
         let users = UserApi().getUsers()
         let sortedUsers = users.sorted { $0.firstName.localizedCaseInsensitiveCompare($1.firstName) == ComparisonResult.orderedAscending }
-        usersArray = sortedUsers
+
+        if usersArray?.count  ?? 0 > 0 {
+            usersArray = usersArray! + sortedUsers
+        }else {
+            usersArray = sortedUsers
+            
+        }
         tblView.reloadData()
         var zoomRect = MKMapRectNull
-        let allAnnotations = self.mapView.annotations
-        self.mapView.removeAnnotations(allAnnotations)
+
         for user in sortedUsers {
             let location = UserAnnotation()
             location.user = user
@@ -80,6 +86,7 @@ extension AllUserVC: MKMapViewDelegate {
     }
 }
 
+// MARK:-  Table view DataSource & Delegates
 extension AllUserVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usersArray?.count ?? 0

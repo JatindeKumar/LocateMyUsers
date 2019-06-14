@@ -46,6 +46,7 @@ class UserDetailVC: UIViewController {
 }
 
 extension UserDetailVC: MKMapViewDelegate {
+    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         if let annotation = view.annotation as? UserAnnotation {
             //>> Get Location Name by Latitude & Longitude <<//

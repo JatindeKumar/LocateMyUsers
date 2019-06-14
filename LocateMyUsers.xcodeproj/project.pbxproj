@@ -135,7 +135,6 @@
 				561034E222B0850900C24326 /* Frameworks */,
 				561034E322B0850900C24326 /* Resources */,
 				5610352522B08F9600C24326 /* Embed Frameworks */,
-				5610352622B0905000C24326 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -190,7 +189,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "Jimmy Shama";
+				ORGANIZATIONNAME = "Jatinder Kumar";
 				TargetAttributes = {
 					561034E422B0850900C24326 = {
 						CreatedOnToolsVersion = 9.4;
@@ -251,22 +250,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5610352622B0905000C24326 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd \"$SRCROOT/../../\"";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		561034E122B0850900C24326 /* Sources */ = {
