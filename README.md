@@ -1,9 +1,6 @@
 # LocateMyUsers
 An convenient way to populate user location on map view with custom annotations and reverse geocoded location names.
 
-# Screenshots
-
-
 
 # Installation & Testing
  
