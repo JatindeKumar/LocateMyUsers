@@ -26,7 +26,7 @@ Location Name (Reverse geocoded)
 * The Landing Page has another option to see alphabetically sorted list of all fetched users.
 * To get the details of any specific user, just tap on the user and you will be taken to the all previous locations of that user marked on map.
 
-#Built with
+### Built with
 
 *Multiplatform binary framework (Kotlin)*
 *Xcode (Swift)*
