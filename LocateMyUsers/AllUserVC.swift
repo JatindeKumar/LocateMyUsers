@@ -29,19 +29,19 @@ class AllUserVC: UIViewController {
     }
     private func getUsers() {
         let users = UserApi().getUsers()
-        let sortedUsers = users.sorted { $0.firstName.localizedCaseInsensitiveCompare($1.firstName) == ComparisonResult.orderedAscending }
 
         if usersArray?.count  ?? 0 > 0 {
-            usersArray = usersArray! + sortedUsers
-            usersArray = usersArray?.sorted { $0.firstName.localizedCaseInsensitiveCompare($1.firstName) == ComparisonResult.orderedAscending }
+            usersArray = usersArray! + users
         }else {
-            usersArray = sortedUsers
+            usersArray = users
             
         }
+        
+        usersArray = usersArray?.sorted { $0.firstName.localizedCaseInsensitiveCompare($1.firstName) == ComparisonResult.orderedAscending }
         tblView.reloadData()
         var zoomRect = MKMapRectNull
 
-        for user in sortedUsers {
+        for user in users {
             let location = UserAnnotation()
             location.user = user
             location.title = user.firstName + "\n" + user.lastName
