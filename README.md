@@ -25,8 +25,8 @@ Location Name (Reverse geocoded)
 
 ### Built with
 
-*Multiplatform binary framework (Kotlin)*
-*Xcode (Swift)*
+* Multiplatform binary framework (Kotlin) *
+* Xcode (Swift) *
 
 # API Reference
 
