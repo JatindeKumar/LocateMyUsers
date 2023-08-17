@@ -1,5 +1,5 @@
 # LocateMyUsers
-An convenient way to populate user location on map view with custom annotations and reverse geocoded location names using **Koltin Multiplatform Binary**.
+An convenient way to populate user location on map view with custom annotations and reverse geocoded location names using **Kotlin Multiplatform Binary**.
 
 
 # Installation & Testing
